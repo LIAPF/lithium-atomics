@@ -1,0 +1,37 @@
+$primary-bg-light: #ec4899
+$primary-bg-dark: #e879f9
+
+$primary-color-light: #282828
+$primary-color-dark: #323232
+
+*
+  font-family: Verdana, Geneva, Tahoma, sans-serif
+
+div
+  width: 100%
+  display: flex
+  cursor: pointer
+  border-radius: 10px
+
+  p
+    margin-top: auto
+    margin-bottom: auto
+
+.start
+  justify-content: flex-start
+
+.center
+  justify-content: center
+
+.end
+  justify-content: flex-end
+
+@media (prefers-color-scheme: dark)
+  div 
+    background-color: $primary-bg-dark
+    color: $primary-color-dark
+
+@media (prefers-color-scheme: light)
+  div 
+    background-color: $primary-bg-light
+    color: $primary-color-light
