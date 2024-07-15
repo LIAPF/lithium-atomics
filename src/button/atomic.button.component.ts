@@ -1,5 +1,5 @@
 import { LithiumElement, html, component, property } from "lithium-core";
-import styles from "./styles.sass?inline";
+import styles from "./atomic.button.style.sass?inline";
 
 @component("atomic-button")
 export class AtomicButtonComponent extends LithiumElement(styles) {
@@ -21,7 +21,7 @@ export class AtomicButtonComponent extends LithiumElement(styles) {
     return html`
       <div
         @click="${this._onClick}"
-        class="${this.color}${this.link ? ' link' : ''}${this.disabled ? ' disabled' : ''}${this.outlined ? ' outlined' : ''} ${this.textalign}"
+        class="pulse-button ${this.color}${this.link ? ' link' : ''}${this.disabled ? ' disabled' : ''}${this.outlined ? ' outlined' : ''} ${this.textalign}"
         style="height: ${this.height}rem;"
       >
         <p>${this.label}</p>

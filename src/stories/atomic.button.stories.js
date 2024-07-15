@@ -1,5 +1,5 @@
 import { html } from 'lit';
-import '../atomic.button.component';
+import '../button/atomic.button.component';
 
 export default {
   title: 'AtomicButtonComponent',
@@ -13,9 +13,9 @@ const Template = (args) => html`
     label=${args.label}
     icon=${args.icon}
     badge=${args.badge}
-    link=${args.link}
-    disabled=${args.disabled}
-    outlined=${args.outlined}
+    .link=${args.link}
+    .disabled=${args.disabled}
+    .outlined=${args.outlined}
   ></atomic-button>
 `;
 
@@ -24,7 +24,7 @@ Default.args = {
   textalign: 'center',
   height: '2',
   color: 'default',
-  label: 'Click Me',
+  label: 'Click Me!',
   icon: '',
   badge: '',
   link: false,

@@ -1,0 +1,76 @@
+@import '../styles/_variables'
+
+*
+  font-family: Verdana, Geneva, Tahoma, sans-serif
+
+div
+  width: 100%
+  display: flex
+  cursor: pointer
+  border-radius: 5px
+
+  p
+    font-weight: 500
+    margin-top: auto
+    margin-bottom: auto
+
+.start
+  justify-content: flex-start
+
+  p
+    margin-left: 10px
+
+.center
+  justify-content: center
+
+.end
+  justify-content: flex-end
+
+  p
+    margin-right: 10px
+
+@media (prefers-color-scheme: dark)
+  .default
+    background-color: $amber-500
+    color: $slate-800
+
+  .danger
+    background-color: $red-600
+    color: $slate-800
+
+@media (prefers-color-scheme: light)
+  .default
+    background-color: $amber-300
+    color: $slate-900
+
+  .danger
+    background-color: $red-500
+    color: $slate-900
+
+  .danger
+    background-color: $red-500
+    color: $slate-900
+
+.pulse-button
+  position: relative
+  overflow: hidden
+  
+  &::after
+    content: ''
+    position: absolute
+    top: 50%
+    left: 50%
+    width: 300%
+    height: 300%
+    background: $slate-300
+    transform: translate(-50%, -50%) scale(0.5)
+    opacity: 0
+    transition: transform 0.8s, opacity 0.8s
+
+  &:active::after
+    opacity: 0.3
+    transition: 0s
+
+.disabled
+  opacity: 0.6
+  pointer-events: none
