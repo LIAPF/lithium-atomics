@@ -1,0 +1,143 @@
+@import '../../styles/_variables'
+
+$border: 2px
+
+*
+  font-family: Verdana, Geneva, Tahoma, sans-serif
+
+button
+  border: 0px
+  width: 100%
+  display: flex
+  cursor: pointer
+  border-radius: 5px
+
+  p
+    font-weight: 500
+    margin-top: auto
+    margin-bottom: auto
+
+.start
+  justify-content: flex-start
+
+  p
+    margin-left: 10px
+
+.center
+  justify-content: center
+
+.end
+  justify-content: flex-end
+
+  p
+    margin-right: 10px
+
+.primary
+    background: $amber-500
+    color: $slate-900
+
+.secondary
+  background: $slate-800
+  color: $slate-300
+
+.success
+  background: $green-500
+  color: $slate-900
+
+.info
+  background: $blue-500
+  color: $slate-900
+
+.warning
+  background: $orange-400
+  color: $slate-900
+
+.danger
+  background: $red-500
+  color: $slate-900
+
+.help
+  background: $purple-500
+  color: $slate-900
+
+.pulse-button
+  position: relative
+  overflow: hidden
+  
+  &::after
+    content: ''
+    position: absolute
+    top: 50%
+    left: 50%
+    width: 300%
+    height: 300%
+    background: $slate-300
+    transform: translate(-50%, -50%) scale(0.5)
+    opacity: 0
+    transition: transform 0.8s, opacity 0.8s
+
+  &:active::after
+    opacity: 0.3
+    transition: 0s
+
+.pulse-button:hover
+  opacity: 0.9
+
+.disabled
+  opacity: 0.6
+  pointer-events: none
+
+p
+  color: var(--text-color) !important
+
+.link, .outlined
+  background: rgba(0, 0, 0, 0)
+
+.link.primary
+    color: $amber-500
+
+.link.secondary
+    color: $slate-300
+
+.link.success
+    color: $green-500
+
+.link.info
+    color: $blue-500
+
+.link.warning
+    color: $orange-400
+
+.link.danger
+    color: $red-500
+
+.link.help
+    color: $purple-500
+
+.outlined.primary
+    color: $amber-500
+    border: $border solid $amber-500
+
+.outlined.secondary
+    color: $slate-300
+    border: $border solid $slate-300
+
+.outlined.success
+    color: $green-500
+    border: $border solid $green-500
+
+.outlined.info
+    color: $blue-500
+    border: $border solid $blue-500
+
+.outlined.warning
+    color: $orange-400
+    border: $border solid $orange-400
+
+.outlined.danger
+    color: $red-500
+    border: $border solid $red-500
+
+.outlined.help
+    color: $purple-500
+    border: $border solid $purple-500
