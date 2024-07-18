@@ -11,9 +11,9 @@ const Template = (args) => html`
     height=${args.height}
     color=${args.color}
     label=${args.label}
-    icon=${args.icon}
     badge=${args.badge}
     fontsize=${args.fontsize}
+    badgesize=${args.badgesize}
     .link=${args.link}
     .disabled=${args.disabled}
     .outlined=${args.outlined}
@@ -23,11 +23,11 @@ const Template = (args) => html`
 export const Interactive = Template.bind({});
 Interactive.args = {
   textalign: 'center',
-  height: '2',
+  height: '2.5',
   fontsize: 'medium',
   color: 'primary',
   label: 'Click Me!',
-  icon: '',
+  badgesize: '1.5',
   badge: '',
   link: false,
   disabled: false,

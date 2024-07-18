@@ -6,11 +6,23 @@ $border: 2px
   font-family: Verdana, Geneva, Tahoma, sans-serif
 
 button
+  gap: 3px
   border: 0px
   width: 100%
   display: flex
   cursor: pointer
   border-radius: 5px
+
+  .badge
+    margin-top: auto
+    margin-bottom: auto
+    background: $slate-900
+    color: $slate-100
+    border-radius: 50%
+    font-size: small
+    display: flex
+    flex-direction: column
+    justify-content: center
 
   p
     font-weight: 500
@@ -33,12 +45,16 @@ button
     margin-right: 10px
 
 .primary
-    background: $amber-500
+    background: $amber-200
     color: $slate-900
 
 .secondary
-  background: $slate-800
-  color: $slate-300
+  background: $slate-900
+  color: $slate-200
+
+  .badge
+    background: $slate-200
+    color: $slate-900
 
 .success
   background: $green-500
@@ -94,7 +110,7 @@ p
   background: rgba(0, 0, 0, 0)
 
 .link.primary
-    color: $amber-500
+    color: $amber-200
 
 .link.secondary
     color: $slate-300
@@ -115,7 +131,7 @@ p
     color: $purple-500
 
 .outlined.primary
-    color: $amber-500
+    color: $amber-200
     border: $border solid $amber-500
 
 .outlined.secondary
