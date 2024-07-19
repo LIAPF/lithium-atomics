@@ -1,14 +1,7 @@
-declare module "*.sass" {
-  const content: { [className: string]: string };
-  export default content;
-}
-
-declare module "*.sass?inline" {
-  const content: string;
-  export default content;
-}
-
-declare module "*.css?inline" {
-  const content: string;
-  export default content;
-}
+declare module '*.scss';
+declare module '*.scss?inline';
+declare module '*.sass';
+declare module '*.sass?inline';
+declare module '*.css';
+declare module '*.css?inline';
+declare module '*.html';
