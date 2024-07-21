@@ -1,0 +1,65 @@
+@import '../../styles/_variables'
+
+*
+  font-family: Verdana, Geneva, Tahoma, sans-serif
+
+.container
+    display: flex
+    
+    span
+        color: $stone-100
+        margin: auto 0
+
+    .label
+        margin-left: 5px
+
+input[type="checkbox"]
+    position: relative
+    width: 40px
+    height: 20px
+    -webkit-appearance: none
+    background: $stone-500
+    outline: none
+    border-radius: 10px
+    box-shadow: inset 0 0 3px $slate-1000
+    cursor: pointer
+
+input:checked[type="checkbox"]
+    background: $amber-200
+
+input[type="checkbox"].secondary:checked
+    background: $slate-900
+
+input[type="checkbox"].success:checked
+    background: $green-500
+
+input[type="checkbox"].info:checked
+    background: $blue-500
+
+input[type="checkbox"].warning:checked
+    background: $orange-400
+
+input[type="checkbox"].danger:checked
+    background: $red-500
+
+input[type="checkbox"].help:checked
+    background: $purple-500
+
+input[type="checkbox"]:before
+    content: ''
+    position: absolute
+    width: 20px
+    height: 20px
+    border-radius: 20px
+    top: 0
+    left: 0
+    background: $slate-50
+    transform: scale(1.1)
+    transition: 0.3s
+
+input:checked[type="checkbox"]:before
+    left: 20px
+
+.disabled
+    opacity: 0.5
+    pointer-events: none
